@@ -24,6 +24,7 @@ html{
     --grey-blue: #A1B2CD;
     --grey-medium: #D3D9E2;
     --grey-light: #E5EAF1;
+    --grey-bg: #eaecf2;
     --grey: #8794A7;
 
     font-size: 62.5%;
@@ -106,4 +107,14 @@ button > img{
     background: var(--white);
     color: var(--blue);
     border: .2rem solid var(--blue);
+}
+
+.btn-red{
+    background: var(--red);
+    color: var(--white);
+}
+
+.btn-grey{
+    background: var(--grey-light);
+    color: var(--grey-dark);
 }
