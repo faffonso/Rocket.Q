@@ -25,7 +25,7 @@
     <div id="room">
 
         <header>
-            <a href="">
+            <a href="\">
                 <img src="/images/logo.svg" alt="Logo Rocket.Q">
             </a>
 
@@ -108,7 +108,7 @@
                                 </a>
                             </div>
                         </div>
-                    <% }); %>                        
+                    <% }); %>                   
 
                 </div>
             </section>
@@ -118,20 +118,19 @@
     <!--Modal-->
     <div class="modal-wrapper">
         <div class="modal">
+            <h2>Excluir Pergunta</h2>
+            <p>Tem certeza que você deseja excluir esta pergunta?</p>
 
-            <h2>Excluir pergunta</h2>
-            <p>Tem certeza que deseja exlcuir essa pergunta?</p>
-            
             <form action="#" method="POST">
-                <label for-id="password" class="sr-only">Digite sua senha</label>
-                <input id="password" type="password" name="password" placeholder="**********" />
+                <label class="sr-only" for-id="password">Digite sua senha admin</label>
+                <input type="password" id="password" name="password" placeholder="Digite sua senha" />
 
                 <div class="buttons">
-                    <button class="btn-grey cancel">Cancelar</button>
+                    <div class="btn btn-grey cancel">Cancelar</div>
                     <button class="btn-red">Sim, excluir</button>
                 </div>
-
             </form>
+
         </div>
     </div>
 

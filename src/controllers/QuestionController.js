@@ -1,3 +1,5 @@
+const Database = require('../db/config')
+
 module.exports = {
     async index (req, res){
         const db = await Database()
@@ -7,14 +9,11 @@ module.exports = {
         const action = req.params.action
         const password = req.body.password
 
-        console.log(`room = ${roomId}, questionId = ${questionId}
-        action = ${action}, password = ${password}`)
-
         const verifyRoom = await db.get(`SELECT * FROM rooms WHERE id = ${roomId}`)
         if(verifyRoom.pass == password){
             if(action == "delete"){
                 await db.run(`DELETE FROM questions WHERE id = ${questionId}`)
-            } else if(action == "check"){
+            }else if(action == "check"){
                 await db.run(`UPDATE questions SET read = 1 WHERE id = ${questionId}`)
             }
             res.redirect(`/room/${roomId}`)
